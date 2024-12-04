@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>RecipEat</title>
+</head>
+
+<body>
+
+    <header class="bulma-overlay-mixin-parent">
+        <div class="bulma-overlay-mixin title">
+            <h1>RecipEat</h1>
+            <p class="create subtitle is-3">Create your treat!</p>
+        </div>
+    </header>
+    <div>
+        <div class="tile is-ancestor">
+            <div class="ingredient-search-container tile is-4 is-vertical is-parent control">
+
+                <form class="tile is-child box has-background-success-light	" id="user-form">
+                    <input class="input is-primary block" type="text" id="q"
+                        placeholder="Enter ingredients here Ex. avocado, chicken, rice">
+                    <button class="button is-rounded is-link is-primary is-outlined is-light is-focused media-left"
+                        type="submit" id="search-btn">Search</button>
+                    <button
+                        class='button is-rounded mx-2 is-link is-success is-light is-focused is-outlined media-center'
+                        onClick="window.location.reload();" type="button" id="refresh-btn">Refresh</button>
+                    <!-- HTML code for adding refresh button -->
+                    <h3>Recently Searched:
+                        <div id="ingredient-search-history"></div>
+                    </h3>
+                   
+                    <!-- use local storage to append saved ingredients here -->
+                </form>
+
+            </div>
+
+            <div class="results tile is-parent column">
+
+                <article class="tile is-child notification box is-12 has-background-success-light">
+                    <h2 class="content title is-4 has-text-link">Your Recipe Results:</h2>
+                    <span id="recipe-results"> </span>
+                    <!-- recipes will populate here upon clicking search using javascript createElement -->
+                </article>
+            </div>
+        </div>
+        
+    </div>
+    </div>
+
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="assets/script.js"></script>
+
+</html>
